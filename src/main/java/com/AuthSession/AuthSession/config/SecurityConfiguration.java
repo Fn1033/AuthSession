@@ -38,8 +38,7 @@ public class SecurityConfiguration {
                         .invalidateHttpSession(true) // Invalidate session
                         .deleteCookies("JSESSIONID") // Remove session cookies
                         .clearAuthentication(true)
-                )
-                .addFilter(new LoginFilter(authenticationManager()));
+                );
 
         return http.build();
     }
